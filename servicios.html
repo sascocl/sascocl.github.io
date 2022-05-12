@@ -5,7 +5,7 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Despachos</title>
+        <title>SASCO SpA</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="facturación, contabilidad, inventario, rrhh, blockchain, criptomonedas, criptopagos" name="keywords">
         <meta content="Servicios, asesorías y soluciones computacionales desde Santa Cruz para Chile" name="description">
@@ -70,15 +70,15 @@
                             </li>
                             
                             <li class="">
-                                <a href="/publicas/nosotros.html" id="nosotros">Nosotros</a>
+                                <a href="/nosotros" id="nosotros">Nosotros</a>
+                            </li>
+                            
+                            <li class=" menu-active">
+                                <a href="/servicios" id="servicios">Servicios</a>
                             </li>
                             
                             <li class="">
-                                <a href="/publicas/servicios.html" id="servicios">Servicios</a>
-                            </li>
-                            
-                            <li class="">
-                                <a href="/publicas/clientes.html" id="clientes">Clientes</a>
+                                <a href="/clientes" id="clientes">Clientes</a>
                             </li>
                             
                                 <li class="menu-has-children">
@@ -104,7 +104,7 @@
                             </li>
                             
                             <li class="">
-                                <a href="/publicas/contacto.html" id="contacto">Contacto</a>
+                                <a href="/contacto" id="contacto">Contacto</a>
                             </li>
                         </ul>
                     </nav>
@@ -116,24 +116,87 @@
         <!-- BEGIN MAIN CONTENT -->   
         
 
-<section id="contact">
+<section id="services">
     <div class="container">
         <div class="section-header">
-            <h2>Información sobre despachos</h2>
+            <h2>Servicios</h2>
+            <p>En general, nos enfocamos en servicios informáticos usando tecnologías libres. Hemos diseñado soluciones estándares que podemos ofrecer a nuestros clientes para cumplir con sus objetivos.</p>
         </div>
-        <p>Una vez realizado el pago de productos que requieren despacho, estos serán entregados al proveedor del servicio de transporte para que realice el envío.</p>
-            <p>En envíos nacionales se usará:</p>
-        <ul class="list">
-            <li><i class="ion-android-checkmark-circle"></i> Chilexpress</li>
-            <li><i class="ion-android-checkmark-circle"></i> Correos de Chile</li>
-        </ul>
-        <p>En envíos internacionales se usará:</p>
-        <ul class="list">
-            <li><i class="ion-android-checkmark-circle"></i> DHL Express</li>
-        </ul>
-        <p>En ambos tipos de envíos se obtendrá un número de rastreo que será envíado al cliente para que pueda conocer la ubicación de su compra.</p></div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="box">
+                    <div class="icon"><i class="far fa-chart-bar"></i></div>
+                    <h4 class="title"><a href="">Facturación electrónica</a></h4>
+                    <p class="description">Facturación, contabilidad, punto de venta, inventario, RRHH y más con <a href="http://libredte.github.io">LibreDTE</a>.</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="box">
+                    <div class="icon"><i class="fas fa-code"></i></div>
+                    <h4 class="title"><a href="">Desarrollo de software</a></h4>
+                    <p class="description">Desarrollamos aplicaciones web y móviles para facilitar la gestión de su negocio.</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="box" data-wow-delay="0.2s">
+                    <div class="icon"><i class="fas fa-server"></i></div>
+                    <h4 class="title"><a href="">Administración de sistemas</a></h4>
+                    <p class="description">Instalación, mantenimiento, reparación y monitoreo de sistemas informáticos con GNU/Linux.</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="box" data-wow-delay="0.2s">
+                    <div class="icon"><i class="fas fa-laptop"></i></div>
+                    <h4 class="title"><a href="">Infraestructura de TI</a></h4>
+                    <p class="description">Diseño e implementación de redes computacionales, cableadas e inalámbricas.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
+
+<section id="call-to-action">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 text-center text-lg-left">
+                <h3 class="cta-title">¿En qué podemos ayudar?</h3>
+                <p class="cta-text">Indíquenos sus requerimientos y lo orientaremos con la solución adecuada.</p>
+            </div>
+            <div class="col-lg-3 cta-btn-container text-center">
+                <a class="cta-btn align-middle" href="/contacto">¡Contáctenos!</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="technology">
+    <div class="container">
+        <div class="owl-carousel technology-carousel">
+            <img src="/static/img/pages/servicios/tecnologias/google-cloud.png" alt="" />
+            <img src="/static/img/pages/servicios/tecnologias/aws.png" alt="" />
+            <img src="/static/img/pages/servicios/tecnologias/linode.png" alt="" />
+            <img src="/static/img/pages/servicios/tecnologias/digitalocean.png" alt="" />
+            <img src="/static/img/pages/servicios/tecnologias/cloudflare.png" alt="" />
+            <img src="/static/img/pages/servicios/tecnologias/lets-encrypt.png" alt="" />
+            <img src="/static/img/pages/servicios/tecnologias/zoho-mail.png" alt="" />
+        </div>
+    </div>
+</section>
+
+<script>
+$(document).ready(function() {
+
+  // Technology carousel (uses the Owl Carousel library)
+  $(".technology-carousel").owlCarousel({
+    autoplay: true,
+    dots: true,
+    loop: true,
+    responsive: { 0: { items: 2 }, 768: { items: 4 }, 900: { items: 6 }
+    }
+  });
+
+});
+</script>
 
 
 
@@ -149,9 +212,9 @@
                             <a href="https://tienda.sasco.cl/carro"><i class="fas fa-shopping-cart fa-fw"></i> Ver carro de compras</a>
                             <a href="https://tienda.sasco.cl/pagos"><i class="fas fa-dollar-sign fa-fw"></i> Pagar cuenta online</a>
                             <a href="https://sasco.cl/boletas"><i class="fas fa-file-alt fa-fw"></i> Verificar boleta electrónica</a>
-                            <a href="/publicas/despachos.html"><i class="fas fa-truck fa-fw"></i> Información sobre despachos</a>
-                            <a href="/publicas/privacidad.html"><i class="fas fa-user-secret fa-fw"></i> Política de privacidad</a>
-                            <a href="/publicas/terminos.html"><i class="fas fa-gavel fa-fw"></i> Términos y condiciones</a>
+                            <a href="/despachos"><i class="fas fa-truck fa-fw"></i> Información sobre despachos</a>
+                            <a href="/privacidad"><i class="fas fa-user-secret fa-fw"></i> Política de privacidad</a>
+                            <a href="/terminos"><i class="fas fa-gavel fa-fw"></i> Términos y condiciones</a>
                         </div>
                     </div>
                     <div class="col-md-4 footer-links">
@@ -161,7 +224,7 @@
                             <a href="https://sascocl.slack.com"><i class="fab fa-slack fa-fw"></i> Trabajo en equipo en Slack</a>
                             <a href="https://mail.sasco.cl"><i class="far fa-envelope fa-fw"></i> Correo en Gmail</a>
                             <a href="https://libredte.cl/dte/contribuyentes/seleccionar/76192083"><i class="far fa-file-alt fa-fw"></i> SASCO SpA en LibreDTE</a>
-                            <a href="/publicas/trabajaConNosotros.html"><i class="fas fa-people-carry fa-fw"></i> Trabaja con nosotros</a>
+                            <a href="/trabaja-con-nosotros"><i class="fas fa-people-carry fa-fw"></i> Trabaja con nosotros</a>
                         </div>
                     </div>
                     <div class="col-md-4 footer-links">
