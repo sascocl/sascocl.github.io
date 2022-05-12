@@ -1,0 +1,390 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Trabaja con Nosotros</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="facturación, contabilidad, inventario, rrhh, blockchain, criptomonedas, criptopagos" name="keywords">
+        <meta content="Servicios, asesorías y soluciones computacionales desde Santa Cruz para Chile" name="description">
+        <link rel="shortcut icon" type="image/x-icon" href="/static/img/favicon.png" />
+        <link href="/static/img/apple-touch-icon.png" rel="apple-touch-icon">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+        <!-- Bootstrap CSS File -->
+        <link href="/static/layouts/massive-full/js/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Libraries CSS Files -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+        <link href="/static/layouts/massive-full/css/animate/animate.min.css" rel="stylesheet">
+        <link href="/static/layouts/massive-full/css/ionicons/css/ionicons.min.css" rel="stylesheet">
+        <link href="/static/layouts/massive-full/css/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="/static/layouts/massive-full/css/magnific-popup/magnific-popup.css" rel="stylesheet">
+        <!-- Main Stylesheet File -->
+        <link href="/static/layouts/massive-full/css/reveal/css/style.css" rel="stylesheet">
+        <link href="/static/layouts/massive-full/css/style.css" rel="stylesheet">
+        <!-- Jquery (para poder ser usado en páginas)-->
+        <script src="/static/layouts/massive-full/jquery/jquery.min.js"></script>
+    </head>
+
+    <body id="top" data-ng-app="tienda">
+        <!-- Start Header Area -->
+        <!--========================== Top Bar ============================-->
+        <section id="topbar" class="d-none d-lg-block">
+            <div class="container clearfix">
+                <div class="contact-info float-left">
+                    <i class="far fa-envelope"></i>
+                    <script>
+                        var username = "hola";
+                        var hostname = "sasco.cl";
+                        document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" + username + "@" + hostname + "</a>");
+                    </script>
+                    <i class="fas fa-phone"></i> +56 2 32102297
+                </div>
+                
+                <div class="topbar-links float-right" data-ng-controller="Controller_NavMenu">
+                    <a href="https://github.com/sascocl" title="Ir al repositorio de Github de SASCO SpA"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/company/2551011" title="SASCO SpA en Linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="{{tienda.config.url.base}}/carro" title="Ver carro de compras" class="ng-cloak">
+                        <i class="fas fa-shopping-cart"></i> <span class="badge">{{tienda.carro.cantidad}}</span></a>
+                    </li>
+                </div>
+                
+            </div>
+        </section>
+        <!--==========================  Header ============================-->
+        <header id="header">
+            <div class="container">
+                <div>
+                    <div id="logo" class="pull-left" style="display:inline">
+                        <a  href="/">
+                            <img src="/static/img/logo.png" alt="Logo SASCO Spa" style="max-height:50px"/>
+                        </a>
+                    </div>
+                    <nav id="nav-menu-container" class="d-print-none">
+                        <ul class="nav-menu" data-ng-controller="Controller_NavMenu">
+                            
+                            <li class=""> 
+                                <a href="/" id="inicio">Inicio</a>
+                            </li>
+                            
+                            <li class="">
+                                <a href="/publicas/nosotros" id="nosotros">Nosotros</a>
+                            </li>
+                            
+                            <li class="">
+                                <a href="/publicas/servicios" id="servicios">Servicios</a>
+                            </li>
+                            
+                            <li class="">
+                                <a href="/publicas/clientes" id="clientes">Clientes</a>
+                            </li>
+                            
+                                <li class="menu-has-children">
+                                    <a class="nav-link dropdown-toggle" id="tienda">Tienda</a>
+                                    <ul>
+                                        <li data-ng-repeat="clasificacion in tienda.items.clasificaciones" class="ng-cloak">
+                                            <a href="{{tienda.config.url.base}}/catalogo/c/{{clasificacion.codigo}}" id="tienda">{{clasificacion.nombre}}</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            
+                            <li class="menu-has-children" id="proyectos">
+                                <a class="nav-link dropdown-toggle">Proyectos</a>
+                                <ul>
+                                    <li><a href="https://libredte.cl">Facturación y Boletas Electrónicas (DTE)</a></li>
+                                    <li><a href="https://bhexpress.cl">Boleta de Honorarios Electrónica (BHE)</a></li>
+                                    <li><a href="https://billmysales.com">Pasarela de Facturación para Ecommerce</a></li>
+                                    <li><a href="https://api.libredte.cl">API para extracción de datos del SII</a></li>
+                                    <li><a href="https://contafi.cl">Estadísticas e Indicadores SII (RCV, BTE, BHE)</a></li>
+                                    <li><a href="https://criptopagos.cl">CriptoPagos / Pagos electrónicos</a></li>
+                                    <li><a href="https://mitest.cl">Pruebas de Selección Múltiple</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="">
+                                <a href="/publicas/contacto" id="contacto">Contacto</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header><!-- #header -->
+        <!-- End Header Area -->
+
+        <!-- BEGIN MAIN CONTENT -->   
+        
+
+<section id="contact">
+    <div class="container">
+        <div class="section-header">
+            <h2>Trabaja con nosotros</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="lead mb-4 text-uppercase font-weight-bold">¡Se parte de nuestro equipo!</div>
+                <p>¿Tienes interés en integrar el equipo de SASCO? Elige el área de tu interés:</p>
+                <ul class="list">
+                    <li><i class="ion-android-checkmark-circle"></i> Ventas y Marketing</li>
+                    <li><i class="ion-android-checkmark-circle"></i> Gestión y Operaciones</li>
+                    <li><i class="ion-android-checkmark-circle"></i> Soporte Contable y Técnico</li>
+                    <li><i class="ion-android-checkmark-circle"></i> Tecnología y Desarrollo</li>
+                </ul>
+                <hr/>
+                <p>¿Buscas práctica? ¡conversemos! Aceptamos desde estudiantes de liceos a universitarios.</p>
+            </div>
+            <div class="col-md-8">
+                <img src="/static/img/pages/trabaja-con-nosotros/workteam.jpg" class="img-fluid img-thumbnail mx-auto d-block" alt="" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="box" data-wow-delay="0.2s">
+                    <div class="icon"><i class="fas fa-code"></i></div>
+                    <h4 class="title"><a href="">Programación Web</a></h4>
+                    <p class="description">
+                        <p>Python, Django, Bootstrap y Javascript</p>
+                        <p class="text-success"><small>Práctica disponible</small></p>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="box" data-wow-delay="0.2s">
+                    <div class="icon"><i class="fab fa-android"></i></div>
+                    <h4 class="title"><a href="">Programación Móvil</a></h4>
+                    <p class="description">
+                        <p>Ionic en Android e iOS</p>
+                        <p class="text-success"><small>Práctica disponible</small></p>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="box" data-wow-delay="0.2s">
+                    <div class="icon"><i class="fas fa-palette"></i></div>
+                    <h4 class="title"><a href="">Diseño</a></h4>
+                    <p class="description">
+                        <p>Material para marketing, UX/UI</p>
+                        <p class="text-success"><small>Tiempo completo o práctica disponible</small></p>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="box">
+                    <div class="icon"><i class="far fa-money-bill-alt"></i></div>
+                    <h4 class="title"><a href="">Finanzas</a></h4>
+                    <p class="description">
+                        <p>Análisis financiero y mejoras en productos</p>
+                        <p class="text-success"><small>Práctica disponible</small></p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="team">
+    <div class="container">
+        <div class="section-header">
+            <h3>¿Cómo postulo?</h3>
+        </div>
+        <div class="card-deck mb-4">
+            <div class="card">
+                <div class="card-header">Envíanos tu CV</div>
+                <div class="card-body">
+                    <ul class="list">
+                        <li>
+                            <i class="ion-android-checkmark-circle"></i>
+                            Enviar CV (curriculum vitae) al correo
+                            <script language="javascript">
+                                var username = "rrhh";
+                                var hostname = "sasco.cl";
+                                document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" + username + "@" + hostname + "</a>");
+                            </script>
+                        </li>
+                        <li><i class="ion-android-checkmark-circle"></i> En el asunto del correo debes colocar "Quiero trabajar con SASCO como CARGO" <small>(cambiar por el cargo que corresponda)</small></li>
+                        <li><i class="ion-android-checkmark-circle"></i> El CV debe ser enviado obligatoriamente para ser considerado en formato PDF <small>(<a href="https://es.libreoffice.org" target="_blank">una opción es convertir con LibreOffice</a>)</small></li>
+                        <li><i class="ion-android-checkmark-circle"></i> ¿Postulas a práctica? Adjunta tu certificado de notas</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">Adjunta datos relevantes</div>
+                <div class="card-body">
+                    <ul class="list">
+                        <li><i class="ion-android-checkmark-circle"></i> ¿Cuál fue tu última experiencia laboral? ¿Qué hacías?</li>
+                        <li><i class="ion-android-checkmark-circle"></i> ¿Buscas trabajo a tiempo completo, práctica o freelance?</li>
+                        <li><i class="ion-android-checkmark-circle"></i> ¿Cuál es tu nivel de inglés?</li>
+                        <li><i class="ion-android-checkmark-circle"></i> ¿Tienes perfil de Linkedin o Github? ¿Cuál es?</li>
+                        <li><i class="ion-android-checkmark-circle"></i> No incluyas una foto, si lo haces, que sea una de <a href="https://www.sp-studio.de" target="_blank">SP Studio</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-4">
+            <div class="card-header">Características generales al trabajar con nosotros</div>
+            <div class="card-body">
+                <ul class="list">
+                    <li><i class="ion-android-checkmark-circle"></i> Trabajo presencial, debes ser de Santa Cruz o alrededores <small>(excepto trabajos que específicamente indiquen remoto)</small></li>
+                    <li><i class="ion-android-checkmark-circle"></i> Trabajamos 40 horas a la semana <small>(de 8:30 a 17:30 con una hora de almuerzo)</small></li>
+                    <li><i class="ion-android-checkmark-circle"></i> Damos aguinaldo en septiembre y en diciembre. Además pagamos el 25% de gratificación mensualmente.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+        <!-- END MAIN CONTENT -->
+
+        <!-- Start Footer Area -->
+        <footer id="footer" class="d-print-none">
+            <!-- Enlaces -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 footer-links">
+                        <div>
+                            <a href="https://tienda.sasco.cl/carro"><i class="fas fa-shopping-cart fa-fw"></i> Ver carro de compras</a>
+                            <a href="https://tienda.sasco.cl/pagos"><i class="fas fa-dollar-sign fa-fw"></i> Pagar cuenta online</a>
+                            <a href="https://sasco.cl/boletas"><i class="fas fa-file-alt fa-fw"></i> Verificar boleta electrónica</a>
+                            <a href="/publicas/despachos"><i class="fas fa-truck fa-fw"></i> Información sobre despachos</a>
+                            <a href="/publicas/privacidad"><i class="fas fa-user-secret fa-fw"></i> Política de privacidad</a>
+                            <a href="/publicas/terminos"><i class="fas fa-gavel fa-fw"></i> Términos y condiciones</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 footer-links">
+                        <div>
+                            <a href="https://dashboard.tawk.to"><i class="fas fa-comments fa-fw"></i> Chat en Tawk</a>
+                            <a href="https://soporte.sasco.cl/scp"><i class="fas fa-question-circle fa-fw"></i> Soporte en OsTicket</a>
+                            <a href="https://sascocl.slack.com"><i class="fab fa-slack fa-fw"></i> Trabajo en equipo en Slack</a>
+                            <a href="https://mail.sasco.cl"><i class="far fa-envelope fa-fw"></i> Correo en Gmail</a>
+                            <a href="https://libredte.cl/dte/contribuyentes/seleccionar/76192083"><i class="far fa-file-alt fa-fw"></i> SASCO SpA en LibreDTE</a>
+                            <a href="/publicas/trabajaConNosotros"><i class="fas fa-people-carry fa-fw"></i> Trabaja con nosotros</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 footer-links">
+                        <div>
+                            <a href="https://kernel.org"><i class="fab fa-linux fa-fw"></i> Linux</a>
+                            <a href="https://php.net"><i class="fab fa-php fa-fw"></i> PHP</a>
+                            <a href="https://www.python.org"><i class="fab fa-python fa-fw"></i> Python</a>
+                            <a href="https://www.postgresql.org"><i class="fas fa-database fa-fw"></i> PostgreSQL</a>
+                            <a href="https://bitcoin.org"><i class="fab fa-bitcoin fa-fw"></i> Bitcoin</a>
+                            <a href="https://www.ethereum.org"><i class="fab fa-ethereum fa-fw"></i> Ethereum</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- banners -->
+            <div class="container mt-4">
+                <div class="row">
+                    <div class="col-md-3 mb-2 text-center">
+                        <a href="https://libredte.cl" target="_blank">
+                            <img src="/static/img/footer/libredte.png" alt="LibreDTE" class="img-thumbnail img-fluid" />
+                        </a>
+                    </div>
+                    <div class="col-md-3 mb-2 text-center">
+                        <a href="https://bhexpress.cl" target="_blank">
+                            <img src="/static/img/footer/bhexpress.png" alt="BHExpress" class="img-thumbnail img-fluid" />
+                        </a>
+                    </div>
+                    <div class="col-md-3 mb-2 text-center">
+                        <a href="https://billmysales.com" target="_blank">
+                            <img src="/static/img/footer/billmysales.png" alt="BillMySales" class="img-thumbnail img-fluid" />
+                        </a>
+                    </div>
+                    <!--<div class="col-md-3 mb-2 text-center">
+                        <a href="https://criptopagos.cl" target="_blank">
+                            <img src="<?=$_base?>/img/footer/criptopagos.png" alt="CriptoPagos" class="img-thumbnail img-fluid" />
+                        </a>
+                    </div>-->
+                    <div class="col-md-3 mb-2 text-center">
+                        <a href="https://contafi.cl" target="_blank">
+                            <img src="/static/img/footer/contafi.png" alt="ContaFi" class="img-thumbnail img-fluid" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- copyright -->
+            <div class="container">
+                <div class="copyright"> 
+                        <script type="text/javascript">
+
+                            copyright=new Date();
+                            
+                            update=copyright.getFullYear();
+                            
+                            document.write("© 2012 - " + update + " " + "SASCO SpA / Santa Cruz, Chile");
+                        
+                        </script> <br/>
+                    <small>SASCO<sup>&reg;</sup> es una marca registrada de SASCO SpA</small>
+                </div>
+                <div class="credits">
+                    Original design <a href="https://bootstrapmade.com/reveal-bootstrap-corporate-template">Reveal</a> by <a href="https://bootstrapmade.com">BootstrapMade</a>
+                </div>
+            </div>
+        </footer><!-- #footer -->
+        <!--/ End Footer Area -->
+        <!-- JavaScript Libraries -->
+        <script src="/static/layouts/massive-full/js/lib/jquery/jquery-migrate.min.js"></script>
+        <script src="/static/layouts/massive-full/js/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="/static/layouts/massive-full/js/lib/easing/easing.min.js"></script>
+        <script src="/static/layouts/massive-full/js/lib/superfish/hoverIntent.js"></script>
+        <script src="/static/layouts/massive-full/js/lib/superfish/superfish.min.js"></script>
+        <script src="/static/layouts/massive-full/js/lib/wow/wow.min.js"></script>
+        <script src="/static/layouts/massive-full/js/lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="/static/layouts/massive-full/js/lib/magnific-popup/magnific-popup.min.js"></script>
+        <script src="/static/layouts/massive-full/js/lib/sticky/sticky.js"></script>
+        <!-- Template Main Javascript File -->
+        <script type="text/javascript" src="https://cdn.sasco.cl/js/__.js"></script>
+        <script type="text/javascript" src="https://cdn.sasco.cl/js/form.js"></script>
+        <script src="/static/layouts/massive-full/js/main.js"></script>
+        <!--Start of Tawk.to Script-->
+        
+        <script type="text/javascript">
+            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+            (function(){
+                var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+                s1.async=true;
+                s1.src='https://embed.tawk.to/5bb01f7fb033e9743d01e45e/default';
+                s1.charset='UTF-8';
+                s1.setAttribute('crossorigin','*');
+                s0.parentNode.insertBefore(s1,s0);
+            })();
+        </script>
+        <!--End of Tawk.to Script-->
+        <!-- Facebook Pixel Code -->
+        <!--<script>
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', 'PIXEL_CODE');
+            fbq('track', 'PageView');
+        </script>
+        <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=PIXEL_CODE&ev=PageView&noscript=1" /></noscript>-->
+        <!-- End Facebook Pixel Code -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103810153-3"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-103810153-3');
+        </script>
+    </body>
+    <!-- Tienda SASCO SpA -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.js"></script>
+    <script src="https://tienda.sasco.cl/sitio/js/sasco.js"></script>
+</html>
